@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://cod0gw8lv0fsa"]
+[gd_scene load_steps=3 format=3 uid="uid://cod0gw8lv0fsa"]
+
+[ext_resource type="Texture2D" uid="uid://bi6t1qkt0hmm" path="res://assets/imgs/border.png" id="1_jwu8a"]
+[ext_resource type="Texture2D" uid="uid://71xbi3alhtmk" path="res://assets/imgs/terisscene.png" id="2_538cv"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -8,3 +11,19 @@ offset_bottom = 40.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.9, 0.9)
+
+[node name="Border" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("1_jwu8a")
+
+[node name="TetrisScene" type="TextureRect" parent="Border"]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 35.0
+offset_right = 865.0
+offset_bottom = 685.0
+texture = ExtResource("2_538cv")
