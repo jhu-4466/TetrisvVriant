@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dusa8ef3voyl"]
+
+[ext_resource type="Script" path="res://src/tetrisproperty.cs" id="1_noth8"]
+[ext_resource type="Texture2D" uid="uid://cxuocwnds8vfg" path="res://assets/imgs/red.png" id="2_ey18k"]
+
+[resource]
+script = ExtResource("1_noth8")
+tetris_texture = ExtResource("2_ey18k")
+tetris_type = 2
+spawn_position = Vector2(-10, -350)
