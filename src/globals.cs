@@ -10,19 +10,19 @@ using System;
 */
 
 [GlobalClass]
-public partial class globals : Node
+public partial class Globals : Node
 {
 	// TetrisType Type
 	public enum TetrisType {
 		I, L, Z, S  // S - Square
 	}
 
-	// TetrisType cells relative position coords
-	public static class TetrisCells
+	// TetrisType composition relative position coords
+	public static class TetrisComposition
 	{
 		// (x, y)
 		// positive direction: x-axis is to right, y-axis is to bottom
-		public static Dictionary<TetrisType, Vector2[]> cells = new Dictionary<TetrisType, Vector2[]> {
+		public static Dictionary<TetrisType, Vector2[]> blocks = new Dictionary<TetrisType, Vector2[]> {
 			{TetrisType.I, new[] { new Vector2(0, 0), new Vector2(1, 0), new Vector2(2, 0), new Vector2(3, 0)}},
 			{TetrisType.L, new[] { new Vector2(0, 1), new Vector2(0, 0), new Vector2(1, 0), new Vector2(2, 0)}},
 			{TetrisType.Z, new[] { new Vector2(0, 1), new Vector2(1, 1), new Vector2(1, 0), new Vector2(2, 0)}},
@@ -31,11 +31,11 @@ public partial class globals : Node
 	}
 
 	// TetrisType Resources
-	public static Dictionary<TetrisType, Resource> tetris_resources = new Dictionary<TetrisType, Resource> {
-			{TetrisType.I, GD.Load("res://resources/i_tetris.tres")},
-			{TetrisType.L, GD.Load("res://resources/l_tetris.tres")},
-			{TetrisType.Z, GD.Load("res://resources/z_tetris.tres")},
-			{TetrisType.S, GD.Load("res://resources/s_tetris.tres")}
+	public static Dictionary<TetrisType, TetrisProperty> tetris_resources = new Dictionary<TetrisType, TetrisProperty> {
+			{TetrisType.I, GD.Load<TetrisProperty>("res://resources/i_tetris.tres")},
+			{TetrisType.L, GD.Load<TetrisProperty>("res://resources/l_tetris.tres")},
+			{TetrisType.Z, GD.Load<TetrisProperty>("res://resources/z_tetris.tres")},
+			{TetrisType.S, GD.Load<TetrisProperty>("res://resources/s_tetris.tres")}
 	};
 
 	// rotation matrix

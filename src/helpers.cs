@@ -3,7 +3,7 @@ using System;
 
 
 [GlobalClass]
-public partial class helpers: Node {
+public partial class Helpers: Node {
     private static readonly Random random = new Random();
     
     public static T enumvalue_helper<T>() where T : Enum

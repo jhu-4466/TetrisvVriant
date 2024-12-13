@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://b02llfwqlwlxi"]
 
-[ext_resource type="Script" path="res://src/tetrisproperty.cs" id="1_ase2e"]
+[ext_resource type="Script" path="res://src/TetrisProperty.cs" id="1_ase2e"]
 [ext_resource type="Texture2D" uid="uid://dpkkm4shamfut" path="res://assets/imgs/blue.png" id="2_7kteq"]
 
 [resource]

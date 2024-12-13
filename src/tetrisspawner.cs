@@ -3,15 +3,15 @@ using System;
 
 
 
-public partial class tetrisspawner : Node
+public partial class TetrisSpawner : Node
 {
 	// [NodePath($"../Broad")]
-	public board _board;
+	public Board _board;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_board = GetNode<board>($"../Board");
+		_board = GetNode<Board>($"../Board");
 		if (_board == null)
 		{
 			GD.PrintErr("Board node not found!");
@@ -20,7 +20,7 @@ public partial class tetrisspawner : Node
 			GD.Print("heihei");
 		}
 
-		globals.TetrisType current_tetris = helpers.enumvalue_helper<globals.TetrisType>();
+		Globals.TetrisType current_tetris = Helpers.enumvalue_helper<Globals.TetrisType>();
 		_board.tetris_spawn(current_tetris, false);
 	}
 }
